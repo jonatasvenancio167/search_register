@@ -139,9 +139,16 @@ GEM
       timeout
     net-smtp (0.3.3)
       net-protocol
+    nexmo (7.2.1)
+      nexmo-jwt (~> 0.1.1)
+      sorbet-runtime (~> 0.5)
+      zeitwerk (~> 2, >= 2.2)
+    nexmo-jwt (0.1.2)
+      jwt (~> 2)
     nio4r (2.5.9)
     nokogiri (1.14.3-x86_64-darwin)
       racc (~> 1.4)
+    notify (0.5.2)
     popper_js (2.11.7)
     public_suffix (5.0.1)
     puma (5.6.5)
@@ -199,6 +206,7 @@ GEM
     simple_form (5.2.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
+    sorbet-runtime (0.5.10810)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -251,6 +259,8 @@ DEPENDENCIES
   dotenv
   importmap-rails
   jbuilder
+  nexmo (~> 7.2, >= 7.2.1)
+  notify
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
   redis (~> 4.0)

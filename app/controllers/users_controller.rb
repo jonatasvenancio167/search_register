@@ -32,10 +32,11 @@ class UsersController < ApplicationController
 
     if @user.present?
       @user.update(activated: true)
-      redirect_to root_path, notice: I18n.t('users.notice.activate_success')
+      redirect_to root_path
+      flash[:success] = I18n.t('users.notice.activate_success')
     else
-      flash.now[:alert] = I18n.t('users.notice.activate_error')
       render :activate
+      flash[:alert] = I18n.t('users.notice.activate_error')
     end
   end
 

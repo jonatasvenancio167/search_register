@@ -7,6 +7,7 @@ ruby "3.0.3"
 gem "rails", "~> 7.0.4", ">= 7.0.4.3"
 gem 'bootstrap', '~> 5.1.3'
 gem 'simple_form'
+gem 'notify'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -26,7 +27,7 @@ gem "turbo-rails"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 gem "bcrypt"
-
+gem 'nexmo', '~> 7.2', '>= 7.2.1'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"

@@ -1,3 +1,5 @@
+require 'nexmo'
+
 class SendSmsService
   attr_reader :user
 
@@ -6,18 +8,28 @@ class SendSmsService
   end
 
   def call
-    client = Twilio::REST::Client.new(account_sid, auth_token)
-    client.messages.create( from: ENV['TO_NUMBER'], to: "+55#{user.telephone}", body: message)
+    client = Nexmo::Client.new(api_key: nexmo_api_key, api_secret: nexmo_api_secret)
+    response = client.sms.send( 
+      from: ENV['TELEPHONE_NUMBER'], 
+      to: "+55#{user.telephone}", 
+      text: message
+    )
+
+    if response.messages.first.status == '0'
+      puts 'Mensagem enviada com sucesso!'
+    else
+      puts 'Erro no envio da mensagem: #{response.messages.first.error_text}' 
+    end
   end
 
   private 
 
-  def account_sid 
-    ENV['TWILIO_ACCOUNT_SID']
+  def nexmo_api_key 
+    ENV['NEXMO_API_KEY']
   end
 
-  def auth_token
-    ENV['TWILIO_AUTH_TOKEN']
+  def nexmo_api_secret
+    ENV['NEXMO_API_SECRET']
   end
 
   def message
