@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h1> Ruby version</h1>
+<p><strong>3.0.3</strong></p>
 
-Things you may want to cover:
+<h1>Rails Version</h1> 
+<p><strong>7.0.4.3</strong</p>
 
-* Ruby version
+<h1>database</h1>
+<p>SQLite</p>
 
-* System dependencies
+<h1>Configuration</h1>
+<p> run the commando <strong>bundle install</strong> to install dependencies
 
-* Configuration
+<h1> Database creation </h1>
+<p> rails db:create db:migrate </p>
 
-* Database creation
+<h1>How i make to run project?</h1>
+<p>rails s</p>
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
