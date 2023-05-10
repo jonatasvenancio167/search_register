@@ -1,0 +1,8 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @user %>
+
+<div>
+  <%= link_to I18n.t('users.edit'), edit_user_path(@user) %> |
+  <%= link_to I18n.t('users.back'), users_path %>
+</div>

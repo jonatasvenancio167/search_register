@@ -1,0 +1,15 @@
+<div style='margin-top: 25%; margin-left: 25%'>
+  <%= form_tag activate_users_path, method: :get do %>
+    <form class='form-group'>
+      <div class='row'>
+        <div class='col-md-6'>
+        <%= text_field_tag :activation_code, nil, class: 'form-control', placeholder: 'Código de ativação' %>
+        </div>
+        <div class='col-md-3'>
+          <%= submit_tag I18n.t('users.active'), class: 'btn btn-success' %>
+        </div>
+      </div>
+    </form>
+  <% end %>
+</div>
+

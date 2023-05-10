@@ -1,0 +1,32 @@
+pt:
+  activerecord:
+    errors: 
+      models:
+        user:
+          attributes:
+            password_confirmation:
+              confirmation: As senhas não conferem
+  users:
+    user: 'Usuário'
+    register: Registro
+    show: Visualizar
+    back: Voltar
+    edit: Editar
+    submit: Enviar
+    active: Ativar
+    search: Pesquisar
+    signup: Login
+
+    attributes:
+      name: Nome
+      biography: Biografia
+      telephone: Telefone
+      birthdate: Data de Nascimento
+      email: E-mail
+      password: Senha
+      password_confirmation: Confirmação de Senha
+
+    notice: 
+      success: Usuário criado com sucesso! Verificar o código em seu telefone 
+      activate_success: Ativado com sucesso!
+      activate_error: Código de Ativação Errado!
